@@ -36,7 +36,8 @@ int main(int argc, char* argv[]){
 	leitura = read(ficheiro, ler_ficheiro, 20);
 	
 	
-	while (leitura > 0) {
+	while (leitura > 0) 
+    {
 		soma += leitura;
 		ler_ficheiro[leitura] = '\0';
 
@@ -49,10 +50,8 @@ int main(int argc, char* argv[]){
 	if (leitura == -1) {
 		perror("Erro na leitura do ficheiro");
 		exit(1);
-	} else {
-		puts("");	
 	}
-
+    
 	// Fecha o ficheiro
 	close(ficheiro);
 
