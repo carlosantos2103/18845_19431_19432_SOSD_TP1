@@ -57,6 +57,7 @@ int conta(int argc,char *argv){
 		return 1;
 	}
 
+	printf("\n%s\n", argv);
 	ficheiro = open(argv, O_RDONLY);
 
 	// Verifica se o ficheiro foi aberto corretamente

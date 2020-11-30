@@ -11,6 +11,9 @@ int main(int argc, char *argv[])
 {
     system("cls");
     int contador = 0;
+    char *token;
+    const char s[2] = " ";
+    char palavra[1024];
     printf("$./interpretador");
     puts("\n");
     while (1)
@@ -18,7 +21,9 @@ int main(int argc, char *argv[])
         if (contador > 0)
         {
             printf("%% ");
-            scanf("%s %s",argv[1],argv[2]);
+            fgets(palavra, 1024, stdin);
+            token = strtok(palavra,s);
+            //scanf("%s %s",argv[1],argv[2]);
             if (strcmp(argv[1],"exit") == 0)
             {
                 exit(0);
