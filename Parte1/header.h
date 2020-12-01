@@ -1,4 +1,12 @@
 // Fazer update nisto !!
+
+#include <stdio.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <dirent.h>
+#include <string.h>
+#include <stdlib.h>
+
 #pragma region Funcao de mostrar
 // Recebe como parametros quantos argumentos foram dados e qual o ficheiro para mostar
 int mostra(int argc,char *argv){ 
@@ -57,7 +65,6 @@ int conta(int argc,char *argv){
 		return 1;
 	}
 
-	printf("\n%s\n", argv);
 	ficheiro = open(argv, O_RDONLY);
 
 	// Verifica se o ficheiro foi aberto corretamente
@@ -95,7 +102,7 @@ int conta(int argc,char *argv){
 }
 #pragma endregion
 
-#pragma region Funcao de apaga
+#pragma region Funcao de apagar
 int apaga(int argc,char *argv){
     int fd;
 	
@@ -115,11 +122,76 @@ int apaga(int argc,char *argv){
 	}
 	
 	// Fecha o ficheiro
-	close(fd);
+	//close(fd);
 
 	return 0;	
 }
 #pragma endregion
+
+/*#pragma region Funcao de informar
+int informa(int argc,char *argv)
+{
+    int inode;
+    char username[500];
+	struct stat stats;
+
+    if (argc < 2) {
+		fputs("Nao foi apresentado nenhum ficheiro.\n", stderr);
+		return 1;
+	}
+
+    if(stat(argv, &stats) == 0)
+    {
+        //printf("");
+        printf("Tipo de ficheiro: ");
+        
+        if (S_ISREG(stats.st_mode))
+        {
+            printf("Ficheiro regular\n");
+        }
+        else if (S_ISDIR(stats.st_mode))
+        {
+            printf("Diretório\n");
+        }
+            
+        else if (S_ISCHR(stats.st_mode))
+        {
+            printf("Dispositivo de personagem\n");
+        }
+            
+        else if (S_ISBLK(stats.st_mode))
+        {
+            printf("Dispositivo de bloqueio\n");
+        }
+            
+        else if (S_ISFIFO(stats.st_mode))
+        {
+            printf("FIFO\n");
+        }
+
+        else if (S_ISLNK(stats.st_mode))
+        {
+            printf("Ligação simbólica\n");
+        }
+            
+        else if (S_ISSOCK(stats.st_mode))
+        {
+            printf("Soquete de rede\n");
+        }
+    
+        inode = stats.st_ino;
+        printf("I-node: %d\n", inode);
+
+        getlogin_r(username, 500);
+        printf("Utilizador dono: %s\n", username);
+    }
+    else
+    {
+        printf("Não foi possivel obter as propriedades do ficheiro\n");
+    }
+}
+
+#pragma endregion*/
 
 #pragma region Funcao de acrescentar
 int acrescenta(int argc,char *argv1,char *argv2){
@@ -185,3 +257,75 @@ int acrescenta(int argc,char *argv1,char *argv2){
     return 0;
 }
 #pragma endregion
+
+/*#pragma region Funcao de listar
+int lista(int argc,char *argv)
+{ 
+    DIR *d;
+    struct dirent *dir;
+
+   if (argc < 2) {
+		fputs("Nao foi apresentado nenhum caminho.\n", stderr);
+		return 1;
+	}
+    system("clear");
+
+    if (strcmp(argv, "\n") == 0)
+    {
+        d = opendir(".");
+        if (d) 
+        {
+            printf("------------------------------\n");
+            while ((dir = readdir(d)) != NULL) 
+            {
+                if(dir->d_type==DT_DIR)
+                {
+                    printf("Diretoria\t| %s\n", dir->d_name);
+                }
+            }
+            rewinddir(d);
+            while ((dir = readdir(d)) != NULL)
+            {
+                if(dir->d_type!=DT_DIR)
+                {
+                    printf("Ficheiro\t| %s\n", dir->d_name);
+                }
+            }
+            printf("------------------------------\n");
+            closedir(d);
+        }
+    }
+    else
+    {
+        strtok(argv, "\n");
+        d = opendir(argv);
+        if (d) 
+        {
+            printf("------------------------------\n");
+            while ((dir = readdir(d)) != NULL) 
+            {
+                if(dir->d_type==DT_DIR)
+                {
+                    printf("Diretoria\t| %s\n", dir->d_name);
+                }
+            }
+            rewinddir(d);
+            while ((dir = readdir(d)) != NULL)
+            {
+                if(dir->d_type!=DT_DIR)
+                {
+                    printf("Ficheiro\t| %s\n", dir->d_name);
+                }
+            }
+            printf("------------------------------\n");
+            closedir(d);
+        }
+        else
+        {
+            printf("Não foi possível encontrar essa diretoria\n");
+        }
+        
+    }
+}
+
+#pragma endregion*/
