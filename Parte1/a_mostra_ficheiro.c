@@ -20,27 +20,6 @@ int main(int argc, char *argv[])
     char ler_ficheiro[51];
 
 
-    struct dirent *pDirent;
-    DIR *pDir;
-
-    // Ensure we can open directory.
-
-    pDir = opendir (argv[1]);
-    if (pDir == NULL) {
-        printf ("Nao foi possivel abrir a diretoria '%s'\n", argv[1]);
-        return 1;
-    }
-
-    // Process each entry.
-
-    while ((pDirent = readdir(pDir)) != NULL) {
-        printf ("[%s]\n", pDirent->d_name);
-    }
-
-    // Close directory and exit.
-
-    closedir (pDir);
-
     // Verifica se possui este tipo de sintaxe: comando + ficheiro
     if (argc < 2)
     {

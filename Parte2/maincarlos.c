@@ -9,11 +9,11 @@
 
 int main(int argc, char *argv[])
 {
-    system("clear");
-    char input[1024];
-    char a1[500];
-    char a2[500];
-    char a3[500];
+    system("cls");
+    char input[600];
+    char a1[12] = "";
+    char a2[250] = "";
+    char a3[250] = "";
     int count = -1;
     int result = -1;
     
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     while (1)
     {
         printf("%% ");
-        fgets(input, 1024, stdin);
+        fgets(input, 600, stdin);
         int count = sscanf(input, "%s %s %s", a1, a2, a3);
 
     	//f=fork();
@@ -48,19 +48,19 @@ int main(int argc, char *argv[])
             result = apaga(count, a2);
         }
         //TODO: Funcao "informa" tem de ser melhorada
-       /* else if (strcmp(a1, "informa") == 0)
+        else if (strcmp(a1, "informa") == 0)
         {
             result = informa(count, a2);
-        }*/
+        }
         else if (strcmp(a1, "acrescenta") == 0)
         {
             result = acrescenta(count, a2, a3);
         }
         //TODO: Funcao "lista" tem de ser melhorada
-        /*else if (strcmp(a1, "lista") == 0)
+        else if (strcmp(a1, "lista") == 0)
         {
             result = lista(count, a2);
-        }*/
+        }
         else
         {
             continue;

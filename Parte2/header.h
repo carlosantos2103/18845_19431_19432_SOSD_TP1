@@ -128,7 +128,7 @@ int apaga(int argc,char *argv){
 }
 #pragma endregion
 
-/*#pragma region Funcao de informar
+#pragma region Funcao de informar
 int informa(int argc,char *argv)
 {
     int inode;
@@ -191,7 +191,7 @@ int informa(int argc,char *argv)
     }
 }
 
-#pragma endregion*/
+#pragma endregion
 
 #pragma region Funcao de acrescentar
 int acrescenta(int argc,char *argv1,char *argv2){
@@ -258,19 +258,13 @@ int acrescenta(int argc,char *argv1,char *argv2){
 }
 #pragma endregion
 
-/*#pragma region Funcao de listar
+#pragma region Funcao de listar
 int lista(int argc,char *argv)
 { 
     DIR *d;
     struct dirent *dir;
 
-   if (argc < 2) {
-		fputs("Nao foi apresentado nenhum caminho.\n", stderr);
-		return 1;
-	}
-    system("clear");
-
-    if (strcmp(argv, "\n") == 0)
+    if (strcmp(argv, "") == 0)
     {
         d = opendir(".");
         if (d) 
@@ -328,4 +322,4 @@ int lista(int argc,char *argv)
     }
 }
 
-#pragma endregion*/
+#pragma endregion
