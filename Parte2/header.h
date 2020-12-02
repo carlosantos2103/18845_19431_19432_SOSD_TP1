@@ -14,9 +14,9 @@ int mostra(int argc,char *argv){
     char ler_ficheiro[51];
 
     // Verifica se possui este tipo de sintaxe: comando + ficheiro
-    if (argc < 2)
+    if (argc != 2)
     {
-        fputs("Nao foi apresentado nenhum ficheiro.\n", stderr);
+        fputs("Nao foi apresentado um ficheiro valido.\n", stderr);
         return 1;
     }
 
@@ -60,8 +60,8 @@ int conta(int argc,char *argv){
 	char ler_ficheiro[21];
 
 	// Verifica se possui este tipo de sintaxe: comando + ficheiro
-	if (argc < 2) {
-		fputs("Nao foi apresentado nenhum ficheiro.\n", stderr);
+	if (argc != 2) {
+		fputs("Nao foi apresentado um ficheiro valido.\n", stderr);
 		return 1;
 	}
 
@@ -107,8 +107,8 @@ int apaga(int argc,char *argv){
     int fd;
 	
 	// Verifica se foi enviado o segundo argumento: comando + ficheiro
-	if (argc < 2) {
-		fputs("Nao foi apresentado nenhum ficheiro.\n", stderr);
+	if (argc != 2) {
+		fputs("Nao foi apresentado um ficheiro valido.\n", stderr);
 		return 1;
 	}
 	
@@ -135,8 +135,8 @@ int informa(int argc,char *argv)
     char username[500];
 	struct stat stats;
 
-    if (argc < 2) {
-		fputs("Nao foi apresentado nenhum ficheiro.\n", stderr);
+    if (argc != 2) {
+		fputs("Nao foi apresentado um ficheiro valido.\n", stderr);
 		return 1;
 	}
 
@@ -173,10 +173,9 @@ int informa(int argc,char *argv)
         {
             printf("Ligação simbólica\n");
         }
-            
         else if (S_ISSOCK(stats.st_mode))
         {
-            printf("Soquete de rede\n");
+            printf("Socket\n");
         }
     
         inode = stats.st_ino;
@@ -184,10 +183,12 @@ int informa(int argc,char *argv)
 
         getlogin_r(username, 500);
         printf("Utilizador dono: %s\n", username);
+        return 0;
     }
     else
     {
-        printf("Não foi possivel obter as propriedades do ficheiro\n");
+        perror("Nao foi possivel obter as propriedades do ficheiro");
+        return 1;
     }
 }
 
@@ -200,8 +201,8 @@ int acrescenta(int argc,char *argv1,char *argv2){
 	char texto[1001] = "";
 
 	// Verificar se possui este tipo de sintaxe: comando + 1ºficheiro + 2 ficheiro
-	if (argc < 3) {
-		fputs("Nao foram apresentados os dois ficheiros 1º e 2º.\n", stderr);
+	if (argc != 3) {
+		fputs("Nao foram apresentados dois ficheiros validos.\n", stderr);
 		return 1;
   	}	
 
@@ -264,6 +265,11 @@ int lista(int argc,char *argv)
     DIR *d;
     struct dirent *dir;
 
+    if (argc > 2) {
+		fputs("Nao foi possivel localizar o caminho\n", stderr);
+		return 1;
+  	}	
+
     if (strcmp(argv, "") == 0)
     {
         d = opendir(".");
@@ -287,13 +293,14 @@ int lista(int argc,char *argv)
             }
             printf("------------------------------\n");
             closedir(d);
+            return 0;
         }
     }
     else
     {
         strtok(argv, "\n");
         d = opendir(argv);
-        if (d) 
+        if (d > 0) 
         {
             printf("------------------------------\n");
             while ((dir = readdir(d)) != NULL) 
@@ -313,10 +320,12 @@ int lista(int argc,char *argv)
             }
             printf("------------------------------\n");
             closedir(d);
+            return 0;
         }
         else
         {
-            printf("Não foi possível encontrar essa diretoria\n");
+            perror("Nao foi possivel encontrar essa diretoria");
+            return 1;
         }
         
     }

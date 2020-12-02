@@ -5,11 +5,12 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <string.h>
+#include <locale.h>
 #include "header.h"
 
 int main(int argc, char *argv[])
 {
-    system("cls");
+    system("clear");
     char input[600];
     char a1[12] = "";
     char a2[250] = "";
