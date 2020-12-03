@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     {
         printf("%% ");
         fgets(input, 600, stdin);
-        int count = sscanf(input, "%s %s %s", a1, a2, a3);
+        count = sscanf(input, "%s %s %s", a1, a2, a3);
 
     	//f=fork();
         //printf("%d\n", f);
