@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
-//#include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/wait.h>
 #include <fcntl.h>
 #include <string.h>
 #include <locale.h>
@@ -26,7 +26,6 @@ int main(int argc, char *argv[])
         count = sscanf(input, "%s %s %s", a1, a2, a3);
 
     	//f=fork();
-        //printf("%d\n", f);
         if (count <= 0)
         {
             continue;
@@ -38,37 +37,69 @@ int main(int argc, char *argv[])
         }
         if (strcmp(a1, "mostra") == 0)
         {
-            result = mostra(count, a2);
+        	f=fork();
+        	if (f == 0) {
+        		execl("../Parte1/mostra", "mostra", a2, (char *) NULL );
+        		perror("ERRO ao executar ");
+        	}
+            //result = mostra(count, a2);
         }
         else if (strcmp(a1, "conta") == 0)
         {
-            result = conta(count, a2);
+            f=fork();
+        	if (f == 0) {
+        		execl("../Parte1/conta", "conta", a2, (char *) NULL );
+        		perror("ERRO ao executar ");
+        	}
+            //result = conta(count, a2);
         }
         else if (strcmp(a1, "apaga") == 0)
         {
-            result = apaga(count, a2);
+            f=fork();
+        	if (f == 0) {
+        		execl("../Parte1/apaga", "apaga", a2, (char *) NULL );
+        		perror("ERRO ao executar ");
+        	}
+            //result = apaga(count, a2);
         }
         //TODO: Funcao "informa" tem de ser melhorada
         else if (strcmp(a1, "informa") == 0)
         {
-            result = informa(count, a2);
+            f=fork();
+        	if (f == 0) {
+        		execl("../Parte1/informa", "informa", a2, (char *) NULL );
+        		perror("ERRO ao executar ");
+        	}
+            //result = informa(count, a2);
         }
         else if (strcmp(a1, "acrescenta") == 0)
         {
-            result = acrescenta(count, a2, a3);
+            f=fork();
+        	if (f == 0) {
+        		execl("../Parte1/acrescenta", "acrescenta", a2, a3, (char *) NULL );
+        		perror("ERRO ao executar ");
+        	}
+            //result = acrescenta(count, a2, a3);
         }
         //TODO: Funcao "lista" tem de ser melhorada
         else if (strcmp(a1, "lista") == 0)
-        {
-            result = lista(count, a2);
+        {            
+        	f=fork();
+        	if (f == 0) {
+        		execl("../Parte1/lista", "lista", a2, (char *) NULL );
+        		perror("ERRO ao executar ");
+        	}
+            //result = lista(count, a2);
         }
         else
         {
             continue;
         }
-        printf("\033[01;33m");
-        printf("Terminou o comando %s com codigo %d\n", a1, result);
-        printf("\033[0m");
+        wait(NULL);
+        //printf("\033[01;33m");
+        //TODO: Fix no result que nao esta a returnar
+        //printf("\nTerminou o comando %s com codigo %d\n\n", a1, result);
+        //printf("\033[0m");
     }
     return 0;
 }

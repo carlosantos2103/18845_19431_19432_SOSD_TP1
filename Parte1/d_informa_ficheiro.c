@@ -3,27 +3,19 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-void PropriedadesFicheiro ();
-
-int main()
-{
-    PropriedadesFicheiro();
-}
-
-void PropriedadesFicheiro()
+int main(int argc,char* argv[])
 {
     int inode;
     char username[_SC_LOGIN_NAME_MAX];
-    char caminho[100];
     struct stat stats;
+    
+    if (argc != 2) {
+		fputs("Nao foi apresentado um ficheiro valido.\n", stderr);
+		exit(1);
+	}
 
-    printf("Introduz o caminho do ficheiro: ");
-    scanf("%s", caminho);
-    printf("\n");
-
-    if(stat(caminho, &stats) == 0)
+    if(stat(argv[1], &stats) == 0)
     {
-        //printf("");
         printf("Tipo de ficheiro: ");
         
         if (S_ISREG(stats.st_mode))
@@ -65,9 +57,12 @@ void PropriedadesFicheiro()
 
         getlogin_r(username, _SC_LOGIN_NAME_MAX);
         printf("Utilizador dono: %s\n", username);
+        exit(0);
     }
     else
     {
-        printf("Não foi possivel obter as propriedades do ficheiro\n");
+        perror("Não foi possivel obter as propriedades do ficheiro");
+        exit(1);
     }
 }
+

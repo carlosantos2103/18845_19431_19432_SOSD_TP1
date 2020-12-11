@@ -5,24 +5,17 @@
 #include <string.h>
 #include <stdlib.h>
 
-void Lista ();
-
-int main()
-{
-    Lista();
-}
-
-void Lista()
-{
-    char caminho[MAXNAMLEN];    
+int main(int argc,char* argv[])
+{    
     DIR *d;
     struct dirent *dir;
 
-    printf("Introduz o caminho da diretoria: ");
-    fgets(caminho, MAXNAMLEN, stdin);
-    system("clear");
+    if (argc > 2) {
+		fputs("Nao foi possivel localizar o caminho", stderr);
+		exit(1);
+  	}	
 
-    if (strcmp(caminho, "\n") == 0)
+    if (strcmp(argv[1], "") == 0)
     {
         d = opendir(".");
         if (d) 
@@ -45,12 +38,13 @@ void Lista()
             }
             printf("------------------------------\n");
             closedir(d);
+            exit(0);
         }
     }
     else
     {
-        strtok(caminho, "\n");
-        d = opendir(caminho);
+        strtok(argv[1], "\n");
+        d = opendir(argv[1]);
         if (d) 
         {
             printf("------------------------------\n");
@@ -71,10 +65,12 @@ void Lista()
             }
             printf("------------------------------\n");
             closedir(d);
+            exit(0);
         }
         else
         {
-            printf("Não foi possível encontrar essa diretoria\n");
+            perror("Não foi possível encontrar essa diretoria");
+            exit(1);
         }
         
     }

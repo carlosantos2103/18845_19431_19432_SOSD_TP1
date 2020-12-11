@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
     ficheiro = open(argv[1], O_RDONLY);
 
-// Verifica se o ficheiro foi aberto corretamente
+	// Verifica se o ficheiro foi aberto corretamente
     if (ficheiro < 0)
     {
         // Funciona como uma exceção

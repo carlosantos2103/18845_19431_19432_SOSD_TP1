@@ -44,7 +44,7 @@ int main(int argc, char* argv[]){
 		leitura = read(ficheiro, ler_ficheiro, 20);
 	}
 
-	printf("O ficheiro possui %d caracteres", soma);
+	printf("O ficheiro possui %d caracteres\n", soma);
 
 	// Verifica se houve erro na leitura do ficheiro
 	if (leitura == -1) {
