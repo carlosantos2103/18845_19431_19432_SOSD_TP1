@@ -6,7 +6,6 @@
 #include <fcntl.h>
 #include <string.h>
 #include <locale.h>
-#include "header.h"
 
 int main(int argc, char *argv[])
 {
