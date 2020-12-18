@@ -20,9 +20,9 @@ int main(int argc, char* argv[]){
 	char texto[1001] = "";
 
 	// Verificar se possui este tipo de sintaxe: comando + 1ºficheiro + 2 ficheiro
-	if (argc < 3) {
-		fputs("Nao foram apresentados os dois ficheiros 1º e 2º.\n", stderr);
-		exit(1);
+	if (argc != 3) {
+		fputs("Erro na apresentacao dos ficheiros\n", stderr);
+		exit(EXIT_FAILURE);
   	}	
 
 	// Ficheiro origem
@@ -33,13 +33,13 @@ int main(int argc, char* argv[]){
 	// Caso dê Erro ao abrir o Ficheiro de Origem
 	if (ficheiro1 < 0) {
 	  	// Funciona como uma exceção 
-		perror("Erro na abertura do ficheiro ficheiro Origem\n");
-		exit(1);
+		perror("Erro na abertura do ficheiro ficheiro Origem");
+		exit(EXIT_FAILURE);
 	  }
 
 	if (ficheiro2 < 0){
-		perror("Erro na abertura do ficheiro de Destino\n");
-		exit(1);
+		perror("Erro na abertura do ficheiro de Destino");
+		exit(EXIT_FAILURE);
 	}
 
 	leitura = read(ficheiro1, ler_ficheiro, 20); //0->ficheiro1
@@ -54,8 +54,8 @@ int main(int argc, char* argv[]){
 	
 	// Caso exista um erro na leitura
 	if (leitura == -1) {
-		perror("erro na leitura do 1ºficheiro\n");
-		exit(1);
+		perror("erro na leitura do 1ºficheiro");
+		exit(EXIT_FAILURE);
 	}
 
 	
@@ -66,11 +66,11 @@ int main(int argc, char* argv[]){
 	escrita = write(ficheiro2, texto, soma);
 	
 	if (escrita == -1){
-		perror("Erro na escrita do 2ºficheiro\n");
-		exit(1);
+		perror("Erro na escrita do 2ºficheiro");
+		exit(EXIT_FAILURE);
 	}
 
 	// Fecho do ficheiro de Destino
 	close(ficheiro2);
-	exit(0);
+	exit(EXIT_SUCCESS);
 }

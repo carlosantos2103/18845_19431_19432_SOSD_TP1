@@ -6,25 +6,22 @@ Caso o ficheiro não exista (na diretoria de trabalho atual), o interpretador de
 
 #include <stdlib.h>
 #include <stdio.h>
-
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <dirent.h>
 
- #include <dirent.h>
-
-int main(int argc, char *argv[])
+int main(int argc,char *argv[])
 {
     int ficheiro, leitura;
     char ler_ficheiro[51];
 
-
     // Verifica se possui este tipo de sintaxe: comando + ficheiro
-    if (argc < 2)
+    if (argc != 2)
     {
-        fputs("Nao foi apresentado nenhum ficheiro.\n", stderr);
-        exit(1);
+        fputs("Erro na apresentacao do ficheiro.\n", stderr);
+        exit(EXIT_FAILURE);
     }
 
     ficheiro = open(argv[1], O_RDONLY);
@@ -34,7 +31,7 @@ int main(int argc, char *argv[])
     {
         // Funciona como uma exceção
         perror("Erro na abertura do ficheiro");
-        exit(1);
+        exit(EXIT_FAILURE);
     }
 
     // ficheiro disponivel no descritor fd
@@ -50,12 +47,12 @@ int main(int argc, char *argv[])
     // Caso exista um erro na leitura
     if (leitura == -1)
     {
-        perror("erro na leitura do ficheiro");
-        exit(1);
+        perror("Erro na leitura do ficheiro");
+        exit(EXIT_FAILURE);
     }
 
     // Fecha o ficheiro
     close(ficheiro);
-    
-    exit(0);
+
+    exit(EXIT_SUCCESS);
 }

@@ -6,19 +6,14 @@
 #include <stdlib.h>
 
 int main(int argc,char* argv[])
-{    
+{
     DIR *d;
     struct dirent *dir;
-
-    if (argc > 2) {
-		fputs("Nao foi possivel localizar o caminho", stderr);
-		exit(1);
-  	}	
 
     if (strcmp(argv[1], "") == 0)
     {
         d = opendir(".");
-        if (d) 
+        if (d)
         {
             printf("------------------------------\n");
             while ((dir = readdir(d)) != NULL) 
@@ -38,7 +33,7 @@ int main(int argc,char* argv[])
             }
             printf("------------------------------\n");
             closedir(d);
-            exit(0);
+            exit(EXIT_SUCCESS);
         }
     }
     else
@@ -65,12 +60,12 @@ int main(int argc,char* argv[])
             }
             printf("------------------------------\n");
             closedir(d);
-            exit(0);
+            exit(EXIT_SUCCESS);
         }
         else
         {
             perror("Não foi possível encontrar essa diretoria");
-            exit(1);
+            exit(EXIT_FAILURE);
         }
         
     }

@@ -18,9 +18,9 @@ int main(int argc, char* argv[]){
 	char ler_ficheiro[21];
 
 	// Verifica se possui este tipo de sintaxe: comando + ficheiro
-	if (argc < 2) {
-		fputs("Nao foi apresentado nenhum ficheiro.\n", stderr);
-		exit(1);
+	if (argc != 2) {
+		fputs("Erro na apresentacao do ficheiro.\n", stderr);
+		exit(EXIT_FAILURE);
 	}
 
 	ficheiro = open(argv[1], O_RDONLY);
@@ -29,7 +29,7 @@ int main(int argc, char* argv[]){
 	if (ficheiro < 0) {
 		// Funciona como uma exceção 
 		perror("Erro na abertura do ficheiro");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 
 	// Ficheiro disponivel no descritor fd
@@ -49,11 +49,11 @@ int main(int argc, char* argv[]){
 	// Verifica se houve erro na leitura do ficheiro
 	if (leitura == -1) {
 		perror("Erro na leitura do ficheiro");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
     
 	// Fecha o ficheiro
 	close(ficheiro);
 
-	exit(0);
+	exit(EXIT_SUCCESS);
 }

@@ -16,9 +16,9 @@ int main(int argc, char* argv[]){
 	int fd;
 	
 	// Verifica se foi enviado o segundo argumento: comando + ficheiro
-	if (argc < 2) {
-		fputs("Nao foi apresentado nenhum ficheiro.\n", stderr);
-		exit(1);
+	if (argc != 2) {
+		fputs("Erro na apresentacao do ficheiro.\n", stderr);
+		exit(EXIT_FAILURE);
 	}
 	
 	// Executa a funcao system call, unlink 
@@ -27,11 +27,11 @@ int main(int argc, char* argv[]){
 	// Verifica se existe um erro ao executar a funcao
 	if (fd < 0) {
 		perror("Erro ao apagar o ficheiro");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	
 	// Fecha o ficheiro
 	close(fd);
 
-	exit(0);	
+	exit(EXIT_SUCCESS);	
 }

@@ -10,8 +10,8 @@ int main(int argc,char* argv[])
     struct stat stats;
     
     if (argc != 2) {
-		fputs("Nao foi apresentado um ficheiro valido.\n", stderr);
-		exit(1);
+		fputs("Erro na apresentacao do ficheiro.\n", stderr);
+		exit(EXIT_FAILURE);
 	}
 
     if(stat(argv[1], &stats) == 0)
@@ -57,12 +57,12 @@ int main(int argc,char* argv[])
 
         getlogin_r(username, _SC_LOGIN_NAME_MAX);
         printf("Utilizador dono: %s\n", username);
-        exit(0);
+        exit(EXIT_SUCCESS);
     }
     else
     {
         perror("Não foi possivel obter as propriedades do ficheiro");
-        exit(1);
+        exit(EXIT_FAILURE);
     }
 }
 
