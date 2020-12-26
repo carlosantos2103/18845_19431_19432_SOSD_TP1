@@ -1,0 +1,332 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.7)  26 DEC 2020 18:59
+entering extended mode
+**./Trabalho_Pratico_SOSD.tex
+(Trabalho_Pratico_SOSD.tex
+LaTeX2e <2020-10-01> patch level 2
+L3 programming layer <2020-10-27> xparse <2020-03-03>
+("C:\Program Files\MiKTeX\tex/latex/base\article.cls"
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+("C:\Program Files\MiKTeX\tex/latex/base\size10.clo"
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count175
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+("C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty"
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+)
+("C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty"
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+("C:\Program Files\MiKTeX\tex/generic/babel\babel.sty"
+Package: babel 2020/10/27 3.51 The Babel package
+
+("C:\Program Files\MiKTeX\tex/generic/babel\babel.def"
+File: babel.def 2020/10/27 3.51 Babel common definitions
+\babel@savecnt=\count183
+\U@D=\dimen139
+\l@babelnohyphens=\language79
+
+("C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def")
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count184
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX\tex/latex/babel-portuges\portuges.ldf"
+Language: portuges 2020/05/04 v1.2r Portuguese support from the babel system
+Package babel Info: Making " an active character on input line 143.
+))
+("C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+("C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty"
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen140
+\Gin@req@width=\dimen141
+)
+("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def"
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count185
+\l__pdf_internal_box=\box47
+)
+(Trabalho_Pratico_SOSD.aux)
+\openout1 = `Trabalho_Pratico_SOSD.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count186
+\scratchdimen=\dimen142
+\scratchbox=\box48
+\nofMPsegments=\count187
+\nofMParguments=\count188
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count189
+\MPscratchDim=\dimen143
+\MPnumerator=\count190
+\makeMPintoPDFobject=\count191
+\everyMPtoPDFconversion=\toks19
+) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+) [1
+
+{C:/Users/jpint/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Overfull \hbox (20.36136pt too wide) in paragraph at lines 35--36
+[]\T1/cmr/m/n/10 Parte 1   3 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+
+Overfull \hbox (20.36136pt too wide) in paragraph at lines 36--37
+[]\T1/cmr/m/n/10 Parte 2   5 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+Overfull \hbox (20.36136pt too wide) in paragraph at lines 37--38
+[]\T1/cmr/m/n/10 Parte 3   6 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Overfull \hbox (23.8605pt too wide) in paragraph at lines 38--39
+[]\T1/cmr/m/n/10 Conclusão   14 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
+Overfull \hbox (26.02664pt too wide) in paragraph at lines 39--40
+[]\T1/cmr/m/n/10 Execução das Ta-re-fas   15 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+[2] [3]
+<apaga_parte1.png, id=14, 349.90726pt x 281.25075pt>
+File: apaga_parte1.png Graphic file (type png)
+<use apaga_parte1.png>
+Package pdftex.def Info: apaga_parte1.png  used on input line 66.
+(pdftex.def)             Requested size: 279.92616pt x 225.00089pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 71.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 71.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 71.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 71.
+ [4 <./apaga_parte1.png>]
+<interpretador_parte2.png, id=24, 536.0025pt x 330.48468pt>
+File: interpretador_parte2.png Graphic file (type png)
+<use interpretador_parte2.png>
+Package pdftex.def Info: interpretador_parte2.png  used on input line 88.
+(pdftex.def)             Requested size: 375.19919pt x 231.33769pt.
+
+Overfull \hbox (30.19919pt too wide) in paragraph at lines 88--89
+ [][] 
+ []
+
+[5 <./interpretador_parte2.png>]
+<tp_sosd_a1.png, id=29, 416.15475pt x 349.90726pt>
+File: tp_sosd_a1.png Graphic file (type png)
+<use tp_sosd_a1.png>
+Package pdftex.def Info: tp_sosd_a1.png  used on input line 106.
+(pdftex.def)             Requested size: 291.30634pt x 244.9334pt.
+ [6 <./tp_sosd_a1.png>]
+<tp_sosd_a2.1.png, id=34, 461.92575pt x 350.5095pt>
+File: tp_sosd_a2.1.png Graphic file (type png)
+<use tp_sosd_a2.1.png>
+Package pdftex.def Info: tp_sosd_a2.1.png  used on input line 112.
+(pdftex.def)             Requested size: 277.15758pt x 210.30733pt.
+<tp_sosd_a2.2.png, id=35, 396.88275pt x 461.3235pt>
+File: tp_sosd_a2.2.png Graphic file (type png)
+<use tp_sosd_a2.2.png>
+Package pdftex.def Info: tp_sosd_a2.2.png  used on input line 119.
+(pdftex.def)             Requested size: 238.13148pt x 276.79623pt.
+ [7 <./tp_sosd_a2.1.png> <./tp_sosd_a2.2.png>]
+<tp_sosd_b1.1.jpg, id=42, 493.845pt x 341.02406pt>
+File: tp_sosd_b1.1.jpg Graphic file (type jpg)
+<use tp_sosd_b1.1.jpg>
+Package pdftex.def Info: tp_sosd_b1.1.jpg  used on input line 129.
+(pdftex.def)             Requested size: 296.30928pt x 204.61601pt.
+File: tp_sosd_b1.1.jpg Graphic file (type jpg)
+<use tp_sosd_b1.1.jpg>
+Package pdftex.def Info: tp_sosd_b1.1.jpg  used on input line 134.
+(pdftex.def)             Requested size: 296.30928pt x 204.61601pt.
+ [8 <./tp_sosd_b1.1.jpg>]
+<tp_sosd_c1.png, id=46, 675.7245pt x 470.35725pt>
+File: tp_sosd_c1.png Graphic file (type png)
+<use tp_sosd_c1.png>
+Package pdftex.def Info: tp_sosd_c1.png  used on input line 146.
+(pdftex.def)             Requested size: 405.43784pt x 282.21652pt.
+
+Overfull \hbox (60.43784pt too wide) in paragraph at lines 146--147
+ [][] 
+ []
+
+[9 <./tp_sosd_c1.png>]
+<tp_sosd_c2.png, id=51, 676.929pt x 469.755pt>
+File: tp_sosd_c2.png Graphic file (type png)
+<use tp_sosd_c2.png>
+Package pdftex.def Info: tp_sosd_c2.png  used on input line 153.
+(pdftex.def)             Requested size: 406.16054pt x 281.85518pt.
+
+Overfull \hbox (61.16054pt too wide) in paragraph at lines 153--154
+ [][] 
+ []
+
+[10 <./tp_sosd_c2.png>]
+<tp_sosd_c3.png, id=56, 796.1745pt x 504.08325pt>
+File: tp_sosd_c3.png Graphic file (type png)
+<use tp_sosd_c3.png>
+Package pdftex.def Info: tp_sosd_c3.png  used on input line 159.
+(pdftex.def)             Requested size: 398.08627pt x 252.041pt.
+
+Overfull \hbox (53.08627pt too wide) in paragraph at lines 159--160
+ [][] 
+ []
+
+[11 <./tp_sosd_c3.png>]
+<tp_sosd_c4.png, id=61, 779.3115pt x 549.85425pt>
+File: tp_sosd_c4.png Graphic file (type png)
+<use tp_sosd_c4.png>
+Package pdftex.def Info: tp_sosd_c4.png  used on input line 166.
+(pdftex.def)             Requested size: 389.65479pt x 274.92644pt.
+
+Overfull \hbox (44.65479pt too wide) in paragraph at lines 166--167
+ [][] 
+ []
+
+[12 <./tp_sosd_c4.png>]
+<tp_sosd_d1.png, id=66, 672.26157pt x 475.02469pt>
+File: tp_sosd_d1.png Graphic file (type png)
+<use tp_sosd_d1.png>
+Package pdftex.def Info: tp_sosd_d1.png  used on input line 187.
+(pdftex.def)             Requested size: 336.12996pt x 237.51175pt.
+<tp_sosd_d2.jpg, id=67, 740.7675pt x 236.38312pt>
+File: tp_sosd_d2.jpg Graphic file (type jpg)
+<use tp_sosd_d2.jpg>
+Package pdftex.def Info: tp_sosd_d2.jpg  used on input line 194.
+(pdftex.def)             Requested size: 370.38284pt x 118.19127pt.
+
+Overfull \hbox (25.38284pt too wide) in paragraph at lines 194--195
+ [][] 
+ []
+
+[13 <./tp_sosd_d1.png> <./tp_sosd_d2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--207
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 223--230
+
+ []
+
+[15] (Trabalho_Pratico_SOSD.aux) ) 
+Here is how much of TeX's memory you used:
+ 2283 strings out of 479832
+ 32190 string characters out of 2880873
+ 314165 words of memory out of 3000000
+ 19253 multiletter control sequences out of 15000+200000
+ 541769 words of font info for 42 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 66i,8n,72p,537b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\jpint\AppData\Local\MiKTeX\fonts/p
+k/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\jpint\AppData\Local\MiKTeX\f
+onts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\jpint\AppData\Local\Mi
+KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\jpint\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\jpint\AppD
+ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\jpin
+t\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\User
+s\jpint\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk>
+Output written on Trabalho_Pratico_SOSD.pdf (15 pages, 1657565 bytes).
+PDF statistics:
+ 237 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+
